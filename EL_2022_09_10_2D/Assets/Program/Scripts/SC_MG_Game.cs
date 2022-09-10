@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class SC_MG_Game : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private async void Update()
+    {
+        //開始前アップデート
+        await BeforStartUpdate();
+
+        //ゲームアップデート
+        await GameUpdate();
+
+        //リザルト前
+        await PreResultUpdate();
+    }
+
+    async UniTask BeforStartUpdate()
+    {
+
+
+    }
+    async UniTask GameUpdate()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    async UniTask PreResultUpdate()
     {
-        
+    
     }
 }
